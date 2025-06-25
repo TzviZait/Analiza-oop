@@ -5,6 +5,7 @@ from area_Calculator import Shape
 
 class Circle(Shape):
     def __init__(self,radius):
+        super().__init__(name="Circle")
         if not isinstance(radius, (int, float)):
             raise TypeError("The radius must be a number.")
         if radius <= 0:

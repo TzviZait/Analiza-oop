@@ -1,16 +1,22 @@
 from rectangie import Rectangle
 from square import Square
+from triangle import Triangle
+from circle import Circle
+from hexagon import Hexagon
 
 
 def main():
     try:
-        obj_rectangie = Rectangle(10,5)
-        print(obj_rectangie.get_area())
-        print(obj_rectangie.get_scope())
+        shapes = [
+            Rectangle(5,10),
+            Square(10),
+            Triangle(3,4),
+            Circle(5),
+            Hexagon(5)
+        ]
 
-        obj_square = Square(10)
-        print(obj_square.get_area())
-        print(obj_square.get_scope())
+        for shape in shapes:
+             print(shape)
 
     except (TypeError, ValueError) as e:
         print(e)

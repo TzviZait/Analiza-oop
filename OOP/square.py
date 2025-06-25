@@ -3,6 +3,7 @@ from area_Calculator import Shape
 
 class Square(Shape):
     def __init__(self,side):
+        super().__init__(name="Square")
         if not isinstance(side, (int, float)):
             raise TypeError("The side must be a number.")
         if side <= 0:

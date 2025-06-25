@@ -3,6 +3,8 @@ from area_Calculator import Shape
 
 class Rectangle(Shape):
     def __init__(self,length,width):
+        super().__init__(name="Rectangle")
+
         if not isinstance(length, (int, float)):
             raise TypeError("The length must be a number.")
         if length <= 0:
